@@ -1,0 +1,42 @@
+<mat-card-content>
+    <div class="menu-div">
+        <button mat-raised-button [matMenuTriggerFor]="menu">
+            Menu
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>home</mat-icon>
+                <a routerLink="/home" routerLinkActive="chosen-link">Home</a>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>person_add</mat-icon>
+                <a routerLink="/registration" routerLinkActive="chosen-link">Register</a>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>account_circle</mat-icon>
+                <a routerLink="/login" routerLinkActive="chosen-link">Login</a>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>feedback</mat-icon>
+                <a routerLink="/all-feedbacks" routerLinkActive="chosen-link">Feedbacks</a>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>stars</mat-icon>
+                <a routerLink="/game-results" routerLinkActive="chosen-link">Game Results</a>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>mail_outline</mat-icon>
+                <a routerLink="/contact-us" routerLinkActive="chosen-link">Contact Us</a>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>local_florist</mat-icon>
+                <a routerLink="/about" routerLinkActive="chosen-link">About</a>
+            </button>
+            <button mat-menu-item (click)="authService.logout()">
+                <mat-icon>meeting_room</mat-icon>
+                <a routerLink="/home">Logout</a>
+            </button>
+
+        </mat-menu>
+    </div>
+</mat-card-content>

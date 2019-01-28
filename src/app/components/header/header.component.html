@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-6 offset-xl-3 d-none d-sm-block">
+            <h1>Memory Match Game</h1>
+        </div>
+        
+        <div class="links col-xl-3 d-none d-xl-block">
+            <button mat-raised-button class="d-inline" color="primary" (click)="routeTo('registration')">
+                <mat-icon>person_add</mat-icon>
+                <span>&nbsp;Register</span>
+            </button>
+            &nbsp;
+            <div class="login-options">
+                <button mat-raised-button color="primary" (click)="routeTo('login')">
+                    <mat-icon>account_circle</mat-icon>
+                    <span>&nbsp;{{ authService.getCurrentUserName() }}</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

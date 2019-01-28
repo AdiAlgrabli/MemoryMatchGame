@@ -1,0 +1,44 @@
+<div class="container-fluid my-4">
+    <h1>Contact Us</h1>
+    <form #contactUsForm="ngForm">
+        <div class="row mb-4 mt-2">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="form-inline">
+                    <select id="phone" name="phoneFirstPart" [(ngModel)]="phoneFirstPart" class="form-control select-phone">
+                        <option *ngFor="let p of firstPartPhoneObjs" [value]="p.id">
+                            {{ p.phoneFirstPart }}
+                        </option>
+                    </select>
+                    <input id="phone" type="text" name="phoneSecondPart" #phoneSecondPart2="ngModel" [(ngModel)]="phoneSecondPart" class="form-control second-part-phone"
+                        maxlength="7" pattern="^[1-9]\d{6}$" [class.is-invalid]="phoneSecondPart2.invalid" autocomplete="off">
+                    <label class="text-danger danger-label" [class.d-none]="phoneSecondPart2.valid">Invalid phone number</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" class="form-control mb-3" #email="ngModel" pattern="^[\w]+@[\w]{2,}\.[a-zA-z.]+$" name="email"
+                    [(ngModel)]="contactUsMsg.email" autocomplete="off">
+                <label class="text-danger danger-label" [class.d-none]="email.valid">Invalid email address</label>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" #message="ngModel" name="message" maxlength="400" rows="6" required [(ngModel)]="contactUsMsg.msgContent"
+                    [class.is-invalid]="message.invalid && message.touched" autocomplete="off"></textarea>
+                <label class="text-danger danger-label" [class.d-none]="message.valid || message.untouched">Message is required</label>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="form-group col-md-3">
+                <button class="btn btn-primary" type="submit" (click)="addMessage()" [disabled]="!contactUsForm.form.valid">Send</button>
+            </div>
+        </div>
+    </form>
+</div>

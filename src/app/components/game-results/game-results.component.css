@@ -1,0 +1,32 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+table th {
+    font-size: 30px;
+}
+
+table td {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table-colors {
+    border: 1px solid rgb(111, 114, 114);
+}
+
+tbody { /* includes frame border, background and text*/
+    background: url('/assets/images/black_board.jpg');
+    background-size: 100% 100%;
+    color: white;
+}

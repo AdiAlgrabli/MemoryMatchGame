@@ -1,0 +1,42 @@
+.form-group {
+    width: 300px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+label {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.danger-label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+input {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn  {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(115, 188, 190);
+    border-color: cadetblue;
+    color: white;
+    font-size: 23px;
+    box-shadow: 0px 2px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.btn:hover {
+    cursor: pointer; 
+}

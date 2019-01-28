@@ -1,0 +1,27 @@
+.modal {
+    display: block;
+    height: 0;
+    overflow: visible;
+}
+
+.modal-open {
+    overflow: visible !important;
+}
+
+.modal-open:before, 
+.modal-open:after {
+    display: block;
+    content: " ";
+}
+  
+.modal-body:before,
+.modal-body:after {
+    display: block;
+    content: " ";
+}
+  
+.modal-header:before,
+.modal-header:after {
+    display: block;
+    content: " ";
+}

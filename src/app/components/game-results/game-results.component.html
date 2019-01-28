@@ -1,0 +1,24 @@
+<div *ngIf="gameResults">
+    <h1>Game Results</h1>
+
+    <div class="row mt-3 mb-5">
+        <div class="col-12">
+            <table class="table table-responsive-sm table-striped table-bordered table-hover">
+                <tr>
+                    <th>Date & Time</th>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Game Duration</th>
+                    <th>Steps</th>
+                </tr>
+                <tr *ngFor="let gameResult of gameResults">
+                    <td>{{ gameResult.dateAdded | date: 'short'}}</td>
+                    <td>{{ gameResult.fullName }}</td>
+                    <td>{{ gameResult.username }}</td>
+                    <td>{{ gameResult.timeSpan }}</td>
+                    <td>{{ gameResult.steps }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

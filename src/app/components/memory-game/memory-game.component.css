@@ -1,0 +1,46 @@
+.myBoard {
+    width: 850px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: 100%;
+    resize: both;
+    box-sizing: border-box;
+    perspective: 1000px;
+}
+
+.center {
+    text-align: center;
+}
+
+.cards-div {
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.myDiv {
+    margin-right: 2%;
+    border: solid 1px black;
+}
+
+.start-button {
+    transform-style: preserve-3d;
+    border-style: outset;
+    border-radius: 5px;
+    font-size: 40px;
+    width: 200px;
+    margin: 20px;
+    display: block;
+    margin: 0 auto;
+    background-color: cadetblue;
+    border-color: cadetblue;
+    color: white;
+    box-shadow: 0px 1px 6px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);   
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+

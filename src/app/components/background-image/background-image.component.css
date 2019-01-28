@@ -1,0 +1,9 @@
+div {
+    width: 850px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0;
+    position: absolute;
+}

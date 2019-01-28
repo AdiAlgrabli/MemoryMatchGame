@@ -1,0 +1,21 @@
+<div class="container-fluid mb-5 mt-4">
+    <h1>Feedback us</h1>
+    <form #feedbacksForm="ngForm">
+
+        <div class="row my-4">
+            <div class="form-group">
+                <textarea class="form-control" #feedback="ngModel" name="message" maxlength="400" rows="10" required [(ngModel)]="feedbackObj.fbText"
+                    [class.is-invalid]="feedback.invalid && feedback.touched" autocomplete="off" 
+                    placeholder="What did you think anout the game?.."></textarea>
+                <label class="text-danger danger-label" [class.d-none]="feedback.valid || feedback.untouched">Feedback is required</label>
+            </div>
+        </div>
+
+        <div class="row m-4">
+            <div class="form-group col-sm-12">
+                <button class="btn btn-primary" type="submit" (click)="addFeedback()" [disabled]="!feedbacksForm.form.valid">Send</button>
+            </div>
+        </div>
+
+    </form>
+</div>

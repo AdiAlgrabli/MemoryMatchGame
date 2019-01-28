@@ -1,0 +1,15 @@
+<div class="row center">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 offset-xl-1">
+        <div *ngIf="game.cards" class="myBoard">
+            <app-background-image [backgroundImage]="game.backgroundImageSource"></app-background-image>
+
+            <div class="cards-div" *ngFor="let card of game.cards">
+                <app-card [card]="card" [twoCardsWereFlipped]="game.twoCardsWereFlippedParent" (clickedImage)="cardComp=$event" (click)="handleClick()"></app-card>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3">
+        <app-stopwatch></app-stopwatch>
+        <button class="start-button my-2" (click)="playAgain()">Play</button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+mat-icon {
+    font-family: "Material Icons" !important;
+    font-size: x-large;
+}

@@ -1,0 +1,72 @@
+h1 {
+    display: inline-block;
+    margin: auto;
+    font-size: 65px;
+    font-weight: bold;
+    color: rgb(23, 124, 74);
+    height: 85px;
+    line-height: 85px;   
+    text-align: center;
+}
+
+.links {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.login-options {
+    display: inline-block;
+}
+
+.user-logged {
+    vertical-align: bottom;
+}
+
+.logout-span {
+    color: rgba(0,0,0,.54);;
+    font-family: 'Ink Free';
+    font-size: 17px;
+    font-weight: bold;
+}
+
+label {
+    color: white;
+}
+
+.mat-raised-button {
+    display: inline-block;
+    background-color: rgb(23, 124, 74);
+    border-color: rgb(34, 141, 87);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Ink Free';
+    box-shadow: 2px 2px 6px #2B724E, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5); 
+}
+
+@media(max-width: 960px) {
+    h1 {
+        font-size: 40px;
+        height: 85px;
+        line-height: 85px;
+    }
+  }
+
+  @media(max-width: 720px) {
+    h1 {
+        font-size: 35px;
+        height: 85px;
+        line-height: 85px;
+    }
+  }
+
+  @media(max-width: 540px) {
+    h1 {
+        font-size: 30px;
+        height: 85px;
+        line-height: 85px;
+    }
+  }

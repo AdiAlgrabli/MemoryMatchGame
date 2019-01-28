@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row mt-2 mb-4">
+        <div class="col-sm-12">
+            <h1>Welcome to Memory Match Game! </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-1 p-div">
+            <div class="instructions">
+                <p>
+                    The objective of the game is to flip matching pair of cards in the shortest time, with least steps as possible.
+                </p>
+                <label>* Only registered users can play the game.</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <button class="btn btn-primary" (click)="goTo()" [disabled]="!enablePlayButton">
+            <span>Let's Play!</span>
+            <span class="info" placement="right" ngbTooltip="Only registered users can play. Please sign in or register.">&#9432;</span>
+        </button>
+    </div>
+</div>

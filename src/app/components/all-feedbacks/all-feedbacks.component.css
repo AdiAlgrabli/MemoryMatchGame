@@ -1,0 +1,73 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+}
+
+table th {
+    font-size: 30px;
+}
+
+table td {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table-colors {
+    border: 1px solid rgb(111, 114, 114);
+}
+
+.center-text {
+    text-align: center;
+}
+
+tbody { /* includes frame border, background and text*/
+    background: url('/assets/images/black_board.jpg');
+    background-size: 100% 100%;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.mat-raised-button {
+    display: block;
+    margin: 0 auto;
+    background: url('/assets/images/black_board.jpg');
+    border-color: cadetblue;
+    color: white;
+    font-family: 'Ink Free';
+    font-size: 23px;
+    box-shadow: 1px 1px 4px rgb(120, 125, 125), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.mat-raised-button:disabled,
+.mat-raised-button[disabled] {
+    background-color: rgb(182, 191, 191);
+    border-color: cadetblue;
+    color: white;
+}
+
+.info {
+    font-size: 20px;
+    position: relative;
+    top: -3px;
+    left: 9px;
+}
+
+::ng-deep .tooltip-inner {
+    width: 170px;
+}

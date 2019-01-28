@@ -1,0 +1,66 @@
+<div class="container-fluid my-4">
+    <form #registerForm="ngForm">
+        <h1>Registration</h1>
+
+        <div class="row m-4">
+            <div class="form-group">
+                <label for="fullName">Full Name*</label>
+                <input id="fullName" type="text" class="form-control mb-3" required #fullName="ngModel" pattern="^[a-zA-Z -'.]*$" maxlength="50"
+                    [class.is-invalid]="fullName.invalid && fullName.touched" name="fullName" [(ngModel)]="user.fullName" autocomplete="off">
+                <div *ngIf="fullName.errors && ((fullName.invalid && fullName.touched) || fullName.touched)">
+                    <label class="text-danger danger-label" *ngIf="fullName.errors.required">Full name is required</label>
+                    <label class="text-danger danger-label" *ngIf="fullName.errors.pattern">Full name can only contain letters and signs (-, ', .)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-4">
+            <div class="form-group">
+                <label for="username">Userame*</label>
+                <input id="username" type="text" class="form-control mb-3" required #username="ngModel" pattern="^[a-zA-Z0-9 -_'.]*$" maxlength="20"
+                    [class.is-invalid]="username.invalid && username.touched" name="username" [(ngModel)]="user.username" autocomplete="off">
+                <div *ngIf="username.errors && ((username.invalid && username.touched) || username.touched)">
+                    <label class="text-danger danger-label" *ngIf="fullName.errors.required">Username is required</label>
+                    <label class="text-danger danger-label" *ngIf="fullName.errors.pattern">Username can only contain letters, numbers and signs (-, _, ', .)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-4">
+            <div class="form-group">
+                <label for="password">Password*</label>
+                <input id="password" type="password" class="form-control" required #password="ngModel" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                    maxlength="20" [class.is-invalid]="password.invalid && password.touched" name="password" [(ngModel)]="user.password"
+                    autocomplete="off" passwordToggle>
+                <div *ngIf="password.errors && ((password.invalid && password.touched) || password.touched)">
+                    <label class="text-danger danger-label" *ngIf="password.errors.required">Password is required</label>
+                    <label class="text-danger danger-label" *ngIf="password.errors.pattern">Password must be minimum 8 characters having at least 1 uppercase, 1 lowercase and 1 digit</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-4">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" class="form-control mb-3" #email="ngModel" pattern="^[\w]+@[\w]{2,}\.[a-zA-z.]+$" name="email"
+                    [(ngModel)]="user.email" autocomplete="off">
+                <label class="text-danger danger-label" [class.d-none]="email.valid">Invalid email address</label>
+            </div>
+        </div>
+
+        <div class="row m-4">
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="text" bsDatepicker [bsConfig]="datePickerConfig" class="form-control mb-3" #dateOfBirth="ngModel" name="dateOfBirth"
+                    placement="right" [(ngModel)]="date" autocomplete="off">
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="form-group">
+                <button class="btn" type="submit" (click)="addUser()" [disabled]="!registerForm.form.valid">Register</button>
+            </div>
+        </div>
+
+    </form>
+</div>

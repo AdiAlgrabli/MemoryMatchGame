@@ -1,0 +1,11 @@
+.stopwatch {
+    transform-style: preserve-3d;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    border: ridge 4px rgb(108, 105, 103);
+    background-color: cadetblue;
+    color: white;
+    font-size: 40px;
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+}

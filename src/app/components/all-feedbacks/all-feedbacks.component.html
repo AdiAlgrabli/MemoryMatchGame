@@ -1,0 +1,31 @@
+<div *ngIf="feedbacks">
+    <h1>Feedbacks</h1>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <table class="table table-responsive-sm table-striped table-hover">
+                <tr>
+                    <th class="center-text table-colors">Date & Time</th>
+                    <th class="center-text table-colors">Username</th>
+                    <th class="center-text table-colors">Feedback</th>
+                </tr>
+                <tr *ngFor="let feedback of feedbacks">
+                    <td class="center-text table-colors">{{ feedback.dateAdded | date: 'short' }}</td>
+                    <td class="center-text table-colors">{{ feedback.username }}</td>
+                    <td class="table-colors">{{ feedback.fbText }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row mt-4 mb-4">
+        <div class="col-12 center-block">
+            <button mat-raised-button color="primary" (click)="goTo()" [disabled]="!enableAddFbButton">
+                <mat-icon>add_comment</mat-icon>
+                <span>&nbsp;Add Feedback </span>
+                <span class="info" placement="right" ngbTooltip="Only registered users can add a feedback">&#9432;</span>
+            </button>
+        </div>
+    </div>
+    
+</div>
