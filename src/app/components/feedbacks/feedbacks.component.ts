@@ -16,11 +16,10 @@ export class FeedbacksComponent implements OnInit {
     public currentUser: CurrentUser;
     public feedbackObj: Feedback = new Feedback();
 
-    constructor(
+    constructor (
         private feedbacksService: FeedbacksService, 
         private localModalService: LocalModalService, 
-        private authService: AuthService
-    
+        private authService: AuthService   
     ) { }
 
     ngOnInit() {

@@ -26,7 +26,6 @@ import { MemoryGameComponent } from '../components/memory-game/memory-game.compo
 import { StopwatchComponent } from '../components/stopwatch/stopwatch.component';
 import { StopwatchPipe } from '../pipes/stopwatch.pipe';
 import { ModalComponent } from '../components/modal/modal.component';
-import { Test2Component } from '../components/test2/test2.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { LayoutModule } from '@angular/cdk/layout';
 import { Page404Component } from '../components/page404/page404.component';
@@ -52,7 +51,6 @@ import { AboutComponent } from '../components/about/about.component';
         StopwatchComponent,
         StopwatchPipe,
         ModalComponent,
-        Test2Component,
         Page404Component,
         FooterComponent,
         AboutComponent,

@@ -9,7 +9,6 @@ import { ContactUsComponent } from '../components/contact-us/contact-us.componen
 import { GameResultsComponent } from '../components/game-results/game-results.component';
 import { MemoryGameComponent } from '../components/memory-game/memory-game.component';
 import { StopwatchComponent } from '../components/stopwatch/stopwatch.component';
-import { Test2Component } from '../components/test2/test2.component';
 import { Page404Component } from '../components/page404/page404.component';
 import { AboutComponent } from '../components/about/about.component';
 
@@ -24,7 +23,6 @@ const routes: Routes = [
     { path: "game", component: MemoryGameComponent },
     { path: "stopwatch", component: StopwatchComponent },
     { path: "about", component: AboutComponent },
-    { path: "test2", component: Test2Component },
     { path: "", redirectTo: "/home", pathMatch: "full" },
     { path: "**", component: Page404Component }
 ];

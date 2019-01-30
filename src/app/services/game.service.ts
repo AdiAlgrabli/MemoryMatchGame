@@ -3,7 +3,6 @@ import { ImagesService } from './images.service';
 import { ArraysService } from './arrays.service';
 import { Image } from '../models/image';
 import { Card } from '../models/card';
-import { Stopwatch } from '../models/stopwatch';
 import { CurrentUser } from '../models/currentUser';
 import { GameResult } from '../models/gameResult';
 import { Game } from '../models/game';

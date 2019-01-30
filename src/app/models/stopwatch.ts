@@ -4,5 +4,5 @@ export class Stopwatch {
         public minutes: number = 0,
         public seconds: number = 0,
         public stopwatchStr: string = ''
-    ) { }
+    ){}
 }

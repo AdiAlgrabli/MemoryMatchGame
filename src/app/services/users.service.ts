@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
-import { CurrentUser } from '../models/currentUser';
-import { LocalModalService } from './local-modal.service';
 import { catchError } from 'rxjs/operators';
 import { ErrorHandlerService } from './error-handler.service';
 

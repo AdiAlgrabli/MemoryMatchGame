@@ -8,5 +8,5 @@ export class Card {
         public backImageSource: string = '',
         public backImageName: string = '',
         public notExists: boolean = false,
-    ) { }
+    ){}
 }

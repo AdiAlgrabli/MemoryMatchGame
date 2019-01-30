@@ -11,7 +11,9 @@ export class GameResultsComponent implements OnInit {
 
     public gameResults: GameResult[];
 
-    constructor(private gameResultsService: GameResultsService) { }
+    constructor ( 
+        private gameResultsService: GameResultsService
+    ) { }
 
     ngOnInit() {
         this.gameResultsService.getAllGameResults().subscribe(
