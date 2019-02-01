@@ -6,7 +6,7 @@
             <div class="form-group">
                 <textarea class="form-control" #feedback="ngModel" name="message" maxlength="400" rows="10" required [(ngModel)]="feedbackObj.fbText"
                     [class.is-invalid]="feedback.invalid && feedback.touched" autocomplete="off" 
-                    placeholder="What did you think anout the game?.."></textarea>
+                    placeholder="What did you think about the game?.."></textarea>
                 <label class="text-danger danger-label" [class.d-none]="feedback.valid || feedback.untouched">Feedback is required</label>
             </div>
         </div>
